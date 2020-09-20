@@ -1,0 +1,39 @@
+{
+  "name": "advlib-ble-manufacturers",
+  "homepage": "https://github.com/reelyactive/advlib-ble-manufacturers/",
+  "author": {
+    "name": "reelyActive",
+    "email": "info@reelyactive.com"
+  },
+  "description": "Wireless advertising packet decoding library for Bluetooth Low Energy manufacturer-specific data.  We believe in an open Internet of Things.",
+  "keywords": [
+    "reelyActive",
+    "advlib",
+    "Bluetooth Low Energy",
+    "BLE",
+    "payload processor",
+    "manufacturer-specific data",
+    "library"
+  ],
+  "version": "1.0.0",
+  "engines": {
+    "node": ">=6.0.0"
+  },
+  "main": "./lib/advlibblemanufacturers.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/reelyactive/advlib-ble-manufacturers.git"
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+    "mocha": "^6.0.0"
+  },
+  "bugs": {
+    "url": "https://github.com/reelyactive/advlib-ble-manufacturers/issues"
+  },
+  "contributors": [
+    { "name": "Jeffrey Dungen" }
+  ],
+  "license": "MIT"
+}
