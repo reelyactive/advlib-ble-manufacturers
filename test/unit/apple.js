@@ -17,9 +17,7 @@ const INPUT_DATA_IBEACON = '0200112233445566778899aabbccddeeff01234567fc';
 const EXPECTED_DATA_INVALID_INPUT = null;
 const EXPECTED_DATA_IBEACON = {
     txPower: -4,
-    uuid: "00112233445566778899aabbccddeeff",
-    major: "0123",
-    minor: "4567"
+    deviceIds: [ "00112233445566778899aabbccddeeff/0123/4567" ]
 }
 
 
