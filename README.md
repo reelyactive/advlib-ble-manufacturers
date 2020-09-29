@@ -1,13 +1,48 @@
 advlib-ble-manufacturers
 ========================
 
-Wireless advertising packet decoding library for Bluetooth Low Energy manufacturer-specific data.
+Wireless advertising packet decoding library for Bluetooth Low Energy manufacturer-specific data.  __advlib-ble-manufacturers__ is typically used as a library for [advlib-ble](https://github.com/reelyactive/advlib-ble) which itself is commonly a processor module of the protocol-agnostic [advlib](https://github.com/reelyactive/advlib).
+
+__advlib-ble-manufacturers__ is a lightweight [Node.js package](https://www.npmjs.com/package/advlib-ble-manufacturers) with no dependencies.  See also its sister library [advlib-ble-services](https://github.com/reelyactive/advlib-ble-services).
 
 
 Installation
 ------------
 
     npm install advlib-ble-manufacturers
+
+
+Hello advlib-ble-manufacturers!
+-------------------------------
+
+```javascript
+const advlib = require('advlib-ble-manufacturers');
+
+let companyCode = 0x004c;
+let manufacturerData = '0200112233445566778899aabbccddeeff01234567fc';
+
+let processedData = advlib.processManufacturerSpecificData(companyCode,
+                                                           manufacturerData);
+
+console.log(processedData);
+```
+
+Which should yield the following console output:
+
+    { deviceIds: [ '00112233445566778899aabbccddeeff/0123/4567' ],
+      txPower: -4 }
+
+
+Supported Manufacturers
+-----------------------
+
+The following manufacturers, in order of their assigned company codes, are supported by __advlib-ble-manufacturers__.
+
+| Company Code | Manufacturer | /lib file |
+|:-------------|:-------------|:----------|
+| 0x004c       | Apple        | apple.js  |
+
+Consult the [Bluetooth Assigned Numbers for Company Identifiers](https://www.bluetooth.com/specifications/assigned-numbers/company-identifiers/) for the most recent listing of company code assignments.
 
 
 License
