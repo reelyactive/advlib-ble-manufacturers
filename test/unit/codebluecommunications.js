@@ -11,7 +11,7 @@ const assert = require ('assert');
 // Input data for the scenario
 const INPUT_DATA_INVALID_INPUT = 'ff';
 const INPUT_DATA_DIRACT_PROXIMITY = '01ec12345678f3d3ffaabbccdd17';
-const INPUT_DATA_DIRACT_DIGEST = '110b12345678800045aabbccdd0c';
+const INPUT_DATA_DIRACT_DIGEST = '112b12345678800045aabbccdd0c';
 
 
 // Expected outputs for the scenario
@@ -24,8 +24,10 @@ const EXPECTED_DATA_DIRACT_PROXIMITY = {
 }
 const EXPECTED_DATA_DIRACT_DIGEST = {
     deviceIds: [ '12345678' ],
-    nearest: [ { deviceId: "aabbccdd", interactionCount: 12 } ],
-    timestamp: 69
+    interactionDigest: {
+        interactions: [ null, null, null, { deviceId: "aabbccdd", count: 12 } ],
+        timestamp: 69
+    }
 }
 
 
