@@ -38,9 +38,10 @@ Supported Manufacturers
 
 The following manufacturers, in order of their assigned company codes, are supported by __advlib-ble-manufacturers__.
 
-| Company Code | Manufacturer | /lib file |
-|:-------------|:-------------|:----------|
-| 0x004c       | Apple        | apple.js  |
+| Company Code | Manufacturer             | /lib file                  |
+|:-------------|:-------------------------|:---------------------------|
+| 0x004c       | Apple                    | apple.js                   |
+| 0x0583       | Code Blue Communications | codebluecommunications.js  |
 
 Consult the [Bluetooth Assigned Numbers for Company Identifiers](https://www.bluetooth.com/specifications/assigned-numbers/company-identifiers/) for the most recent listing of company code assignments.
 
@@ -50,7 +51,7 @@ License
 
 MIT License
 
-Copyright (c) 2015-2020 [reelyActive](https://www.reelyactive.com)
+Copyright (c) 2015-2021 [reelyActive](https://www.reelyactive.com)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
