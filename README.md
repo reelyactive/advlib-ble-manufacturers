@@ -46,6 +46,12 @@ The following manufacturers, in order of their assigned company codes, are suppo
 Consult the [Bluetooth Assigned Numbers for Company Identifiers](https://www.bluetooth.com/specifications/assigned-numbers/company-identifiers/) for the most recent listing of company code assignments.
 
 
+Contributing
+------------
+
+Discover [how to contribute](CONTRIBUTING.md) to this open source project which upholds a standard [code of conduct](CODE_OF_CONDUCT.md).
+
+
 License
 -------
 
