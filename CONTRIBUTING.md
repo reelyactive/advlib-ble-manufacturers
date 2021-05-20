@@ -10,7 +10,8 @@ The many ways in which you can contribute include:
 - [financial support](#financial-support)
 - [love and encouragement](#love-and-encouragement)
 
-[![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.0-4baaaa.svg)](CODE_OF_CONDUCT.md)  Kindly observe the standard [code of conduct](CODE_OF_CONDUCT.md) however you choose to contribute.
+[![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.0-4baaaa.svg)](CODE_OF_CONDUCT.md)
+Kindly observe the standard [code of conduct](CODE_OF_CONDUCT.md) however you choose to contribute.
 
 
 Reporting an issue
@@ -50,3 +51,6 @@ This open source project exists because of a perceived community need and the ti
 - :star: starring the project on GitHub
 - :busts_in_silhouette: sharing the project with friends and colleagues to raise awareness
 - :heart: surprising the community and its contributors with random acts of kindness
+
+
+These contribution guidelines were drafted by [the reelyActive team](https://reelyactive.com/team/) and we invite you to adapt them for your own projects.
