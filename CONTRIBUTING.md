@@ -10,7 +10,7 @@ The many ways in which you can contribute include:
 - [financial support](#financial-support)
 - [love and encouragement](#love-and-encouragement)
 
-:information_source: Kindly observe the standard [code of conduct](CODE_OF_CONDUCT.md) however you choose to contribute.  [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.0-4baaaa.svg)](code_of_conduct.md)
+[![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.0-4baaaa.svg)](CODE_OF_CONDUCT.md)  Kindly observe the standard [code of conduct](CODE_OF_CONDUCT.md) however you choose to contribute.
 
 
 Reporting an issue
