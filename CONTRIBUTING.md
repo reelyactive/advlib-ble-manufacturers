@@ -1,14 +1,16 @@
 How to contribute
 =================
 
-First and foremost: thank you for your interest in contributing to this open source software project!  The many ways in which you can contribute include:
+First and foremost: _thank you for your interest in contributing to this open source software project!_
+
+The many ways in which you can contribute include:
 - [reporting an issue](#reporting-an-issue)
 - [fixing an issue](#fixing-an-issue)
 - [adding a feature](#adding-a-feature)
 - [financial support](#financial-support)
 - [love and encouragement](#love-and-encouragement)
 
-:information_source: Kindly observe the standard [code of conduct](CODE_OF_CONDUCT.md) however you choose to contribute.
+:information_source: Kindly observe the standard [code of conduct](CODE_OF_CONDUCT.md) however you choose to contribute.  [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.0-4baaaa.svg)](code_of_conduct.md)
 
 
 Reporting an issue
