@@ -13,9 +13,9 @@ We are currently compiling an open source software security best practices docum
 Keep up to date
 ---------------
 
-A vulnerabilities badge is displayed on the [project README page](README.md#security) reflecting independent test results by [snyk.io](snyk.io) of the latest commit.
+Unless otherwise specified, it is recommended to regularly update to the most recent version of this software package, and to review the security test results, ideally automating this process and including an alerting feature.
 
-Unless otherwise specified, it is recommended to regularly update to the most recent version of this software package, and to review the security test results.
+Observe the [vulnerabilities badge](README.md#security) on the project README page and follow the link to consult independent test results by [snyk.io](https://snyk.io) of the latest commit.
 
 
 Disclose a vulnerability
