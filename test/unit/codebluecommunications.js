@@ -20,14 +20,16 @@ const EXPECTED_DATA_DIRACT_PROXIMITY = {
     acceleration: [ -0.25, -0.1875, 0.9375 ],
     batteryPercentage: 100,
     deviceIds: [ '12345678' ],
-    nearest: [ { deviceId: "aabbccdd", rssi: -69 } ]
+    nearest: [ { deviceId: "aabbccdd", rssi: -69 } ],
+    uri: "https://sniffypedia.org/Organization/Code_Blue_Communications_Inc/DirAct/"
 }
 const EXPECTED_DATA_DIRACT_DIGEST = {
     deviceIds: [ '12345678' ],
     interactionDigest: {
         interactions: [ null, null, null, { deviceId: "aabbccdd", count: 12 } ],
         timestamp: 69
-    }
+    },
+    uri: "https://sniffypedia.org/Organization/Code_Blue_Communications_Inc/DirAct/"
 }
 
 
