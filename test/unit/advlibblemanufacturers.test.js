@@ -20,7 +20,8 @@ const INPUT_DATA_IBEACON = '0200112233445566778899aabbccddeeff01234567fc';
 const EXPECTED_DATA_INVALID_INPUT = null;
 const EXPECTED_DATA_IBEACON = {
     txPower: -4,
-    deviceIds: [ "00112233445566778899aabbccddeeff/0123/4567" ]
+    deviceIds: [ "00112233445566778899aabbccddeeff/0123/4567" ],
+    uri: "https://sniffypedia.org/Organization/Apple_Inc/iBeacon/"
 }
 
 
