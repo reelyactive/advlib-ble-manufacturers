@@ -1,5 +1,5 @@
 /**
- * Copyright reelyActive 2015-2020
+ * Copyright reelyActive 2015-2021
  * We believe in an open Internet of Things
  */
 
@@ -10,7 +10,7 @@ const assert = require ('assert');
 
 // Input data for the scenario
 const INPUT_DATA_INVALID_INPUT = 'ff';
-const INPUT_DATA_IBEACON = '0200112233445566778899aabbccddeeff01234567fc';
+const INPUT_DATA_IBEACON = '021500112233445566778899aabbccddeeff01234567fc';
 
 
 // Expected outputs for the scenario
