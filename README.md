@@ -41,6 +41,7 @@ The following manufacturers, in order of their assigned company codes, are suppo
 | Company Code | Manufacturer             | /lib file                  |
 |:-------------|:-------------------------|:---------------------------|
 | 0x004c       | Apple                    | apple.js                   |
+| 0x03da       | EnOcean                  | enocean.js                 |
 | 0x0583       | Code Blue Communications | codebluecommunications.js  |
 
 Consult the [Bluetooth Assigned Numbers for Company Identifiers](https://www.bluetooth.com/specifications/assigned-numbers/company-identifiers/) for the most recent listing of company code assignments.
