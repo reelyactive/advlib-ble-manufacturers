@@ -21,7 +21,8 @@ const EXPECTED_DATA_OCCUPANCY_MULTI_SENSOR = {
     batteryVoltage: 2.484,
     relativeHumidity: 21.5,
     illuminance: 1218,
-    securitySignature: 'c724eaf0'
+    securitySignature: "c724eaf0",
+    uri: "https://sniffypedia.org/Organization/EnOcean_GmbH/"
 };
 
 
