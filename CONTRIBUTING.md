@@ -53,4 +53,4 @@ This open source project exists because of a perceived community need and the ti
 - :heart: surprising the community and its contributors with random acts of kindness
 
 
-These contribution guidelines were drafted by [the reelyActive team](https://reelyactive.com/team/) and we invite you to adapt them for your own projects under a [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/).
+These contribution guidelines were drafted by [the reelyActive team](https://www.reelyactive.com/team/) and we invite you to adapt them for your own projects under a [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/).

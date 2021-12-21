@@ -24,4 +24,4 @@ Disclose a vulnerability
 Should you discover a novel security issue or vulnerability, kindly __report your findings to security@reelyactive.com__, and provide sufficient detail to effectively address, if not resolve, the issue.  Kindly also provide a means of contact should additional detail be required, _and also so we can return our thanks!_
 
 
-These security guidelines were drafted by [the reelyActive team](https://reelyactive.com/team/) and we invite you to adapt them for your own projects under a [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/).
+These security guidelines were drafted by [the reelyActive team](https://www.reelyactive.com/team/) and we invite you to adapt them for your own projects under a [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/).
