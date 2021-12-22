@@ -29,11 +29,13 @@ const EXPECTED_DATA_OCCUPANCY_MULTI_SENSOR = {
 const EXPECTED_DATA_PTM_215B_PRESS = {
     txCount: 95,
     isButtonPressed: [ false, false, true, false ],
+    securitySignature: "09df40a3",
     uri: "https://sniffypedia.org/Organization/EnOcean_GmbH/"
 }
 const EXPECTED_DATA_PTM_215B_RELEASE = {
     txCount: 96,
     isButtonPressed: [ false, false, false, false ],
+    securitySignature: "4cc8f7a5",
     uri: "https://sniffypedia.org/Organization/EnOcean_GmbH/"
 }
 
