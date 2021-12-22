@@ -11,6 +11,8 @@ const assert = require ('assert');
 // Input data for the scenario
 const INPUT_DATA_OCCUPANCY_MULTI_SENSOR =
                                    'a400000041681344c204405709062b2001c724eaf0';
+const INPUT_DATA_PTM_215B_PRESS = '5f0000000909df40a3';
+const INPUT_DATA_PTM_215B_RELEASE = '60000000084cc8f7a5';
 
 
 // Expected outputs for the scenario
@@ -24,6 +26,16 @@ const EXPECTED_DATA_OCCUPANCY_MULTI_SENSOR = {
     securitySignature: "c724eaf0",
     uri: "https://sniffypedia.org/Organization/EnOcean_GmbH/"
 };
+const EXPECTED_DATA_PTM_215B_PRESS = {
+    txCount: 95,
+    isButtonPressed: [ false, false, true, false ],
+    uri: "https://sniffypedia.org/Organization/EnOcean_GmbH/"
+}
+const EXPECTED_DATA_PTM_215B_RELEASE = {
+    txCount: 96,
+    isButtonPressed: [ false, false, false, false ],
+    uri: "https://sniffypedia.org/Organization/EnOcean_GmbH/"
+}
 
 
 // Describe the scenario
@@ -38,6 +50,18 @@ describe('enocean', function() {
   it('should handle occupancy multi-sensor data', function() {
     assert.deepEqual(manufacturer.process(INPUT_DATA_OCCUPANCY_MULTI_SENSOR),
                      EXPECTED_DATA_OCCUPANCY_MULTI_SENSOR);
+  });
+
+  // Test the process function with PTM_215B button press data
+  it('should handle rocker pad press data', function() {
+    assert.deepEqual(manufacturer.process(INPUT_DATA_PTM_215B_PRESS),
+                     EXPECTED_DATA_PTM_215B_PRESS);
+  });
+
+  // Test the process function with PTM_215B button release data
+  it('should handle rocker pad release data', function() {
+    assert.deepEqual(manufacturer.process(INPUT_DATA_PTM_215B_RELEASE),
+                     EXPECTED_DATA_PTM_215B_RELEASE);
   });
 
 });
