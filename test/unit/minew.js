@@ -23,6 +23,7 @@ const EXPECTED_DATA_S4_STATIC = {
 const EXPECTED_DATA_S4_DOOR_ALARM = {
     batteryPercentage: 99,
     deviceIds: [ 'ac2331234567/2' ],
+    isContactDetected: [ false ],
     uri: "https://sniffypedia.org/Organization/Shenzhen_Minew_Technologies_Co_Ltd/"
 };
 
