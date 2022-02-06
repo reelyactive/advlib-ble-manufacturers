@@ -11,6 +11,9 @@ const assert = require ('assert');
 // Input data for the scenario
 const INPUT_DATA_OCCUPANCY_MULTI_SENSOR =
                                    'a400000041681344c204405709062b2001c724eaf0';
+const INPUT_DATA_IOT_MULTI_SENSOR =
+                           '45000000408a07063b450b008a000228a6230102af0bfd5f17';
+const INPUT_DATA_MOTION_DETECTOR = 'a000000002c044090045010020021012b343';
 const INPUT_DATA_PTM_215B_PRESS = '5f0000000909df40a3';
 const INPUT_DATA_PTM_215B_RELEASE = '60000000084cc8f7a5';
 
@@ -23,7 +26,27 @@ const EXPECTED_DATA_OCCUPANCY_MULTI_SENSOR = {
     batteryVoltage: 2.484,
     relativeHumidity: 21.5,
     illuminance: 1218,
+    isMotionDetected: [ false ],
     securitySignature: "c724eaf0",
+    uri: "https://sniffypedia.org/Organization/EnOcean_GmbH/"
+};
+const EXPECTED_DATA_IOT_MULTI_SENSOR = {
+    txCount: 69,
+    acceleration: [ 0, 0, 0.98 ],
+    temperature: 19.3,
+    batteryPercentage: 87.5,
+    relativeHumidity: 29.5,
+    illuminance: 11,
+    isContactDetected: [ false ],
+    securitySignature: "0bfd5f17",
+    uri: "https://sniffypedia.org/Organization/EnOcean_GmbH/"
+};
+const EXPECTED_DATA_MOTION_DETECTOR = {
+    txCount: 160,
+    batteryPercentage: 96,
+    illuminance: 1,
+    isMotionDetected: [ true ],
+    securitySignature: "1012b343",
     uri: "https://sniffypedia.org/Organization/EnOcean_GmbH/"
 };
 const EXPECTED_DATA_PTM_215B_PRESS = {
@@ -52,6 +75,18 @@ describe('enocean', function() {
   it('should handle occupancy multi-sensor data', function() {
     assert.deepEqual(manufacturer.process(INPUT_DATA_OCCUPANCY_MULTI_SENSOR),
                      EXPECTED_DATA_OCCUPANCY_MULTI_SENSOR);
+  });
+
+  // Test the process function with IoT multi-sensor data
+  it('should handle IoT multi-sensor data', function() {
+    assert.deepEqual(manufacturer.process(INPUT_DATA_IOT_MULTI_SENSOR),
+                     EXPECTED_DATA_IOT_MULTI_SENSOR);
+  });
+
+  // Test the process function with motion detector data
+  it('should handle motion detector data', function() {
+    assert.deepEqual(manufacturer.process(INPUT_DATA_MOTION_DETECTOR),
+                     EXPECTED_DATA_MOTION_DETECTOR);
   });
 
   // Test the process function with PTM_215B button press data
