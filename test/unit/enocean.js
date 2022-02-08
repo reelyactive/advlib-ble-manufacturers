@@ -37,6 +37,7 @@ const EXPECTED_DATA_IOT_MULTI_SENSOR = {
     batteryPercentage: 87.5,
     relativeHumidity: 29.5,
     illuminance: 11,
+    isMotionDetected: [ true ],
     isContactDetected: [ false ],
     securitySignature: "0bfd5f17",
     uri: "https://sniffypedia.org/Organization/EnOcean_GmbH/"
