@@ -28,8 +28,8 @@ const EXPECTED_DATA_S3_STATIC = {
 const EXPECTED_DATA_S3_TEMPERATURE_HUMIDITY = {
     batteryPercentage: 100,
     deviceIds: [ 'ac2331234567/2' ],
-    temperature: 25.4,
-    humidity: 72.3,
+    temperature: 25.44921875,
+    humidity: 72.2734375,
     uri: "https://sniffypedia.org/Organization/Shenzhen_Minew_Technologies_Co_Ltd/"
 };
 const EXPECTED_DATA_S4_STATIC = {
@@ -50,8 +50,8 @@ const EXPECTED_DATA_V3_STATIC = {
     version: "1.3.7"
 };
 const EXPECTED_DATA_V3_TEMPERATURE_HUMIDITY = {
-    temperature: 25.4,
-    humidity: 72.3,
+    temperature: 25.44921875,
+    humidity: 72.2734375,
     uri: "https://sniffypedia.org/Organization/Shenzhen_Minew_Technologies_Co_Ltd/"
 };
 
