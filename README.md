@@ -19,7 +19,7 @@ Hello advlib-ble-manufacturers!
 const advlib = require('advlib-ble-manufacturers');
 
 let companyCode = 0x004c;
-let manufacturerData = '0200112233445566778899aabbccddeeff01234567fc';
+let manufacturerData = '021500112233445566778899aabbccddeeff01234567fc';
 
 let processedData = advlib.processManufacturerSpecificData(companyCode,
                                                            manufacturerData);
@@ -30,7 +30,8 @@ console.log(processedData);
 Which should yield the following console output:
 
     { deviceIds: [ '00112233445566778899aabbccddeeff/0123/4567' ],
-      txPower: -4 }
+      txPower: -4,
+      uri: "https://sniffypedia.org/Organization/Apple_Inc/iBeacon/" }
 
 
 Supported Manufacturers
