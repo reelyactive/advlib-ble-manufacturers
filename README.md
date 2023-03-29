@@ -42,6 +42,7 @@ The following manufacturers, in order of their assigned company codes, are suppo
 | Company Code | Manufacturer             | /lib file                  |
 |:-------------|:-------------------------|:---------------------------|
 | 0x004c       | Apple                    | apple.js                   |
+| 0x0077       | Laird Connectivity       | lairdconnectivity.js       |
 | 0x026c       | Efento                   | efento.js                  |
 | 0x03da       | EnOcean                  | enocean.js                 |
 | 0x0500       | Wiliot                   | wiliot.js                  |
