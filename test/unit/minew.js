@@ -14,8 +14,10 @@ const INPUT_DATA_S3_TEMPERATURE_HUMIDITY = 'a30364197348466745233123ac007ad3';
 const INPUT_DATA_S4_STATIC = 'a40000090600010100006745233123ac1234';
 const INPUT_DATA_S4_DOOR_ALARM = 'a40163010001ff6745233123ac1234';
 const INPUT_DATA_V3_STATIC = 'ca006745233123ac6421870000000000000000001234abcd';
-const INPUT_DATA_V3_TEMPERATURE_HUMIDITY =
+const INPUT_DATA_V3_TEMPERATURE_HUMIDITY_00 =
                              'ca05000000197348466d696e65770000000000001234abcd';
+const INPUT_DATA_V3_TEMPERATURE_HUMIDITY_01 =
+                             'ca05010200197348466d696e65770000000100001234abcd';
 
 // Expected outputs for the scenario
 const EXPECTED_DATA_INVALID_INPUT = null;
@@ -48,9 +50,16 @@ const EXPECTED_DATA_V3_STATIC = {
     uri: "https://sniffypedia.org/Organization/Shenzhen_Minew_Technologies_Co_Ltd/",
     version: "1.3.7"
 };
-const EXPECTED_DATA_V3_TEMPERATURE_HUMIDITY = {
+const EXPECTED_DATA_V3_TEMPERATURE_HUMIDITY_00 = {
+    name: "minew",
     temperature: 25.44921875,
     relativeHumidity: 72.2734375,
+    uri: "https://sniffypedia.org/Organization/Shenzhen_Minew_Technologies_Co_Ltd/"
+};
+const EXPECTED_DATA_V3_TEMPERATURE_HUMIDITY_01 = {
+    isMarked: [ true ],
+    name: "minew",
+    temperature: 25.44921875,
     uri: "https://sniffypedia.org/Organization/Shenzhen_Minew_Technologies_Co_Ltd/"
 };
 
@@ -93,10 +102,18 @@ describe('minew', function() {
                      EXPECTED_DATA_V3_STATIC);
   });
 
-  // Test the process function with V3 temperature humidity data
+  // Test the process function with V3 temperature humidity data (00)
   it('should handle V3 temperature humidity data', function() {
-    assert.deepEqual(manufacturer.process(INPUT_DATA_V3_TEMPERATURE_HUMIDITY),
-                     EXPECTED_DATA_V3_TEMPERATURE_HUMIDITY);
+    assert.deepEqual(manufacturer.process(
+                                         INPUT_DATA_V3_TEMPERATURE_HUMIDITY_00),
+                     EXPECTED_DATA_V3_TEMPERATURE_HUMIDITY_00);
+  });
+
+  // Test the process function with V3 temperature humidity data (01)
+  it('should handle V3 temperature humidity data', function() {
+    assert.deepEqual(manufacturer.process(
+                                         INPUT_DATA_V3_TEMPERATURE_HUMIDITY_01),
+                     EXPECTED_DATA_V3_TEMPERATURE_HUMIDITY_01);
   });
 
 });
