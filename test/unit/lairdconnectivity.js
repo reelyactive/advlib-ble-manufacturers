@@ -14,6 +14,8 @@ const INPUT_DATA_MAGNET = '0100000000006655443322110201001e6215620000000000';
 const INPUT_DATA_MOVEMENT = '0100000000006655443322110301001e6215620000000000';
 const INPUT_DATA_BATTERY_VOLTAGE = '0100000000006655443322110c01001e621562050d000000';
 const INPUT_DATA_TEMPERATURE_3 = '0100000000006655443322111401001e6215620000a84100';
+const INPUT_DATA_CONTACT_TRACER =
+'81ffffff000066554433221100001e621562000130ce0000';
 
 // Expected outputs for the scenario
 const EXPECTED_DATA_INVALID_INPUT = null;
@@ -62,6 +64,17 @@ const EXPECTED_DATA_TEMPERATURE_3 = {
     timestamp: 1645568542,
     uri: "https://sniffypedia.org/Organization/Laird_Connectivity/"
 };
+const EXPECTED_DATA_CONTACT_TRACER = {
+    batteryVoltage: 3.296,
+    deviceIds: [ "112233445566/3" ],
+    flags: 0,
+    isMotionDetected: [ true ],
+    networkId: 65535,
+    profile: 0,
+    timestamp: 1645568542,
+    txPower: 0,
+    uri: "https://sniffypedia.org/Organization/Laird_Connectivity/"
+};
 
 
 // Describe the scenario
@@ -100,6 +113,12 @@ describe('lairdconnectivity', function() {
   it('should handle BT610 temperature data', function() {
     assert.deepEqual(manufacturer.process(INPUT_DATA_TEMPERATURE_3),
                      EXPECTED_DATA_TEMPERATURE_3);
+  });
+
+  // Test the process function with contact tracer data
+  it('should handle contact tracer data', function() {
+    assert.deepEqual(manufacturer.process(INPUT_DATA_CONTACT_TRACER),
+                     EXPECTED_DATA_CONTACT_TRACER);
   });
 
 });
