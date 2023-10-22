@@ -53,6 +53,21 @@ The following manufacturers, in order of their assigned company codes, are suppo
 Consult the [Bluetooth Assigned Numbers for Company Identifiers](https://www.bluetooth.com/specifications/assigned-numbers/company-identifiers/) for the most recent listing of company code assignments.
 
 
+Supported Devices
+-----------------
+
+The following is a _non-exhaustive_ list of devices supported by __advlib-ble-manufacturers__.
+
+| Manufacturer | Model/Device             | /lib file                |
+|:-------------|:-------------------------|:-------------------------|
+| Apple        | iBeacon                  | apple.js                 |
+| Laird        | BT610                    | lairdconnectivity.js     |
+| EnOcean      | EMSIB (STM 550B)         | enocean.js               |
+| EnOcean      | EMDCB                    | enocean.js               |
+| Wiliot       | IoT Pixel                | wiliot.js                |
+| Minew        | MSR01                    | minew.js                 |
+
+
 Contributing
 ------------
 
