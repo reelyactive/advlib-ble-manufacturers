@@ -67,16 +67,13 @@ const EXPECTED_DATA_V3_TEMPERATURE_HUMIDITY_01 = {
     uri: "https://sniffypedia.org/Organization/Shenzhen_Minew_Technologies_Co_Ltd/"
 };
 const EXPECTED_DATA_V3_RADAR_MONITOR_00 = {
-    passageCounts: {
-        entries: 0x0123,
-        exits: 0x3210,
-        total: 0x3333,
-        cyclicCount: 127
-    },
+    passageCounts: [ 0x0123, 0x3210 ],
+    passageCountsCycle: 127,
     uri: "https://sniffypedia.org/Organization/Shenzhen_Minew_Technologies_Co_Ltd/"
 };
 const EXPECTED_DATA_V3_RADAR_MONITOR_01 = {
     numberOfOccupants: 4,
+    numberOfOccupantsCycle: 6,
     uri: "https://sniffypedia.org/Organization/Shenzhen_Minew_Technologies_Co_Ltd/"
 };
 
