@@ -1,5 +1,5 @@
 /**
- * Copyright reelyActive 2021-2022
+ * Copyright reelyActive 2021-2023
  * We believe in an open Internet of Things
  */
 
@@ -18,6 +18,10 @@ const INPUT_DATA_V3_TEMPERATURE_HUMIDITY_00 =
                              'ca05000000197348466d696e65770000000000001234abcd';
 const INPUT_DATA_V3_TEMPERATURE_HUMIDITY_01 =
                              'ca05010200197348466d696e65770000000100001234abcd';
+const INPUT_DATA_V3_RADAR_MONITOR_00 =
+                             'ca18007f230110320000000000000000000000001234abcd';
+const INPUT_DATA_V3_RADAR_MONITOR_01 =
+                             'ca180106046e849b8c709a8c86987a7a8e0000001234abcd';
 
 // Expected outputs for the scenario
 const EXPECTED_DATA_INVALID_INPUT = null;
@@ -60,6 +64,19 @@ const EXPECTED_DATA_V3_TEMPERATURE_HUMIDITY_01 = {
     isMarked: [ true ],
     name: "minew",
     temperature: 25.44921875,
+    uri: "https://sniffypedia.org/Organization/Shenzhen_Minew_Technologies_Co_Ltd/"
+};
+const EXPECTED_DATA_V3_RADAR_MONITOR_00 = {
+    passageCounts: {
+        entries: 0x0123,
+        exits: 0x3210,
+        total: 0x3333,
+        cyclicCount: 127
+    },
+    uri: "https://sniffypedia.org/Organization/Shenzhen_Minew_Technologies_Co_Ltd/"
+};
+const EXPECTED_DATA_V3_RADAR_MONITOR_01 = {
+    numberOfOccupants: 4,
     uri: "https://sniffypedia.org/Organization/Shenzhen_Minew_Technologies_Co_Ltd/"
 };
 
@@ -114,6 +131,18 @@ describe('minew', function() {
     assert.deepEqual(manufacturer.process(
                                          INPUT_DATA_V3_TEMPERATURE_HUMIDITY_01),
                      EXPECTED_DATA_V3_TEMPERATURE_HUMIDITY_01);
+  });
+
+  // Test the process function with V3 radar monitor data (00)
+  it('should handle V3 radar monitor data (pedestrian traffic)', function() {
+    assert.deepEqual(manufacturer.process(INPUT_DATA_V3_RADAR_MONITOR_00),
+                     EXPECTED_DATA_V3_RADAR_MONITOR_00);
+  });
+
+  // Test the process function with V3 radar monitor data (01)
+  it('should handle V3 radar monitor data (occupant info)', function() {
+    assert.deepEqual(manufacturer.process(INPUT_DATA_V3_RADAR_MONITOR_01),
+                     EXPECTED_DATA_V3_RADAR_MONITOR_01);
   });
 
 });
