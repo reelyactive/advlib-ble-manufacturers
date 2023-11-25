@@ -3,6 +3,8 @@ advlib-ble-manufacturers
 
 Wireless advertising packet decoding library for Bluetooth Low Energy manufacturer-specific data.  __advlib-ble-manufacturers__ is typically used as a library for [advlib-ble](https://github.com/reelyactive/advlib-ble) which itself is commonly a processor module of the protocol-agnostic [advlib](https://github.com/reelyactive/advlib).
 
+![Overview of advlib-ble-manufacturers](https://reelyactive.github.io/advlib-ble-manufacturers/images/overview.png)
+
 __advlib-ble-manufacturers__ is a lightweight [Node.js package](https://www.npmjs.com/package/advlib-ble-manufacturers) with no dependencies.  See also its sister library [advlib-ble-services](https://github.com/reelyactive/advlib-ble-services).
 
 
