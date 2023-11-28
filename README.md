@@ -35,6 +35,8 @@ Which should yield the following console output:
       txPower: -4,
       uri: "https://sniffypedia.org/Organization/Apple_Inc/iBeacon/" }
 
+The __advlib-ble-manufacturers__ library observes [these standard properties](https://github.com/reelyactive/advlib#standard-properties).
+
 
 Supported Manufacturers
 -----------------------
