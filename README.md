@@ -51,6 +51,7 @@ The following manufacturers, in order of their assigned company codes, are suppo
 | 0x0583       | Code Blue Communications | codebluecommunications.js  |
 | 0x0590       | Pur3 Ltd (Espruino)      | pur3ltd.js                 |
 | 0x0639       | Minew                    | minew.js                   |
+| 0x0a62       | MOKO Technology          | mokotechnology.js          |
 
 Consult the [Bluetooth Assigned Numbers for Company Identifiers](https://www.bluetooth.com/specifications/assigned-numbers/company-identifiers/) for the most recent listing of company code assignments.
 
@@ -68,6 +69,8 @@ The following is a _non-exhaustive_ list of devices supported by __advlib-ble-ma
 | EnOcean      | EMDCB                    | enocean.js               |
 | Wiliot       | IoT Pixel                | wiliot.js                |
 | Minew        | MSR01                    | minew.js                 |
+| MOKOSmart    | P1                       | mokotechnology.js        |
+| MOKOSmart    | Door Sensor              | mokotechnology.js        |
 
 
 Contributing
