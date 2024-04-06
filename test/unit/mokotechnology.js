@@ -15,7 +15,7 @@ const INPUT_DATA_P1 = '02150900f15427e0304f16031e0d3a190e0a00000000b0';
 const EXPECTED_DATA_INVALID_INPUT = null;
 const EXPECTED_DATA_P1 = {
     batteryVoltage: 3.594,
-    deviceIds: [ '4f30e02754f1/2' ],
+    deviceIds: [ 'f15427e0304f/3' ],
     isContactDetected: [ false ],
     isMotionDetected: [ true ],
     uri: "https://sniffypedia.org/Organization/MOKO_Technology_Ltd/"
