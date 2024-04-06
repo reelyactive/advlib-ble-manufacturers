@@ -1,5 +1,5 @@
 /**
- * Copyright reelyActive 2023
+ * Copyright reelyActive 2023-2024
  * We believe in an open Internet of Things
  */
 
@@ -16,7 +16,7 @@ const EXPECTED_DATA_INVALID_INPUT = null;
 const EXPECTED_DATA_P1 = {
     batteryVoltage: 3.594,
     deviceIds: [ '4f30e02754f1/2' ],
-    isContactDetected: [ true ],
+    isContactDetected: [ false ],
     isMotionDetected: [ true ],
     uri: "https://sniffypedia.org/Organization/MOKO_Technology_Ltd/"
 };
