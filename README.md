@@ -46,6 +46,7 @@ The following manufacturers, in order of their assigned company codes, are suppo
 | Company Code | Manufacturer             | /lib file                  |
 |:-------------|:-------------------------|:---------------------------|
 | 0x004c       | Apple                    | apple.js                   |
+| 0x0059       | Nordic Semiconductor     | nordicsemiconductor.js     |
 | 0x0077       | Laird Connectivity       | lairdconnectivity.js       |
 | 0x026c       | Efento                   | efento.js                  |
 | 0x03da       | EnOcean                  | enocean.js                 |
@@ -66,13 +67,14 @@ The following is a _non-exhaustive_ list of devices supported by __advlib-ble-ma
 | Manufacturer | Model/Device             | /lib file                |
 |:-------------|:-------------------------|:-------------------------|
 | Apple        | iBeacon                  | apple.js                 |
+| MOKOSmart    | S02R (ToF Sensor)        | nordicsemiconductor.js   |
 | Laird        | BT610                    | lairdconnectivity.js     |
 | EnOcean      | EMSIB (STM 550B)         | enocean.js               |
 | EnOcean      | EMDCB                    | enocean.js               |
 | Wiliot       | IoT Pixel                | wiliot.js                |
 | Minew        | MSR01                    | minew.js                 |
 | MOKOSmart    | P1                       | mokotechnology.js        |
-| MOKOSmart    | Door Sensor              | mokotechnology.js        |
+| MOKOSmart    | S03D (Door Sensor)       | mokotechnology.js        |
 
 
 Contributing
