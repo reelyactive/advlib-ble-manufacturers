@@ -13,16 +13,16 @@ const INPUT_DATA_S3_STATIC = 'a301010017000b00010100006745233123ac23d3';
 const INPUT_DATA_S3_TEMPERATURE_HUMIDITY = 'a30364197348466745233123ac007ad3';
 const INPUT_DATA_S4_STATIC = 'a40000090600010100006745233123ac1234';
 const INPUT_DATA_S4_DOOR_ALARM = 'a40163010001ff6745233123ac1234';
-const INPUT_DATA_V3_STATIC = 'ca006745233123ac6421870000000000000000001234abcd';
-const INPUT_DATA_V3_TEMPERATURE_HUMIDITY_00 =
+const INPUT_DATA_V3_TYPE_00 = 'ca006745233123ac6421870000000000000000001234abcd';
+const INPUT_DATA_V3_TYPE_05_00 =
                              'ca05000000197348466d696e65770000000000001234abcd';
-const INPUT_DATA_V3_TEMPERATURE_HUMIDITY_01 =
+const INPUT_DATA_V3_TYPE_05_01 =
                              'ca05010200197348466d696e65770000000100001234abcd';
-const INPUT_DATA_V3_RADAR_MONITOR_00 =
+const INPUT_DATA_V3_TYPE_18_00 =
                              'ca18007f230110320000000000000000000000001234abcd';
-const INPUT_DATA_V3_RADAR_MONITOR_01 =
+const INPUT_DATA_V3_TYPE_18_01 =
                              'ca180106046e849b8c709a8c86987a7a8e0000001234abcd';
-const INPUT_DATA_V3_TEMPERATURE =
+const INPUT_DATA_V3_TYPE_1B =
                              'ca1b010007000165332211ac05ef197300c5000000000010';
 
 
@@ -51,35 +51,35 @@ const EXPECTED_DATA_S4_DOOR_ALARM = {
     isContactDetected: [ false ],
     uri: "https://sniffypedia.org/Organization/Shenzhen_Minew_Technologies_Co_Ltd/"
 };
-const EXPECTED_DATA_V3_STATIC = {
+const EXPECTED_DATA_V3_TYPE_00 = {
     batteryPercentage: 100,
     deviceIds: [ 'ac2331234567/2' ],
     uri: "https://sniffypedia.org/Organization/Shenzhen_Minew_Technologies_Co_Ltd/",
     version: "1.3.7"
 };
-const EXPECTED_DATA_V3_TEMPERATURE_HUMIDITY_00 = {
+const EXPECTED_DATA_V3_TYPE_05_00 = {
     name: "minew",
     temperature: 25.44921875,
     relativeHumidity: 72.2734375,
     uri: "https://sniffypedia.org/Organization/Shenzhen_Minew_Technologies_Co_Ltd/"
 };
-const EXPECTED_DATA_V3_TEMPERATURE_HUMIDITY_01 = {
+const EXPECTED_DATA_V3_TYPE_05_01 = {
     isMarked: [ true ],
     name: "minew",
     temperature: 25.44921875,
     uri: "https://sniffypedia.org/Organization/Shenzhen_Minew_Technologies_Co_Ltd/"
 };
-const EXPECTED_DATA_V3_RADAR_MONITOR_00 = {
+const EXPECTED_DATA_V3_TYPE_18_00 = {
     passageCounts: [ 0x0123, 0x3210 ],
     passageCountsCycle: 127,
     uri: "https://sniffypedia.org/Organization/Shenzhen_Minew_Technologies_Co_Ltd/"
 };
-const EXPECTED_DATA_V3_RADAR_MONITOR_01 = {
+const EXPECTED_DATA_V3_TYPE_18_01 = {
     numberOfOccupants: 4,
     numberOfOccupantsCycle: 6,
     uri: "https://sniffypedia.org/Organization/Shenzhen_Minew_Technologies_Co_Ltd/"
 };
-const EXPECTED_DATA_V3_TEMPERATURE = {
+const EXPECTED_DATA_V3_TYPE_1B = {
     temperature: 25.44921875,
     batteryVoltage: 1.519,
     txPower: -59,
@@ -120,42 +120,40 @@ describe('minew', function() {
                      EXPECTED_DATA_S4_DOOR_ALARM);
   });
 
-  // Test the process function with V3 static data
-  it('should handle V3 static data', function() {
-    assert.deepEqual(manufacturer.process(INPUT_DATA_V3_STATIC),
-                     EXPECTED_DATA_V3_STATIC);
+  // Test the process function with V3 type 0x00 data
+  it('should handle V3 type 0x00 (device information) data', function() {
+    assert.deepEqual(manufacturer.process(INPUT_DATA_V3_TYPE_00),
+                     EXPECTED_DATA_V3_TYPE_00);
   });
 
-  // Test the process function with V3 temperature humidity data (00)
-  it('should handle V3 temperature humidity data', function() {
-    assert.deepEqual(manufacturer.process(
-                                         INPUT_DATA_V3_TEMPERATURE_HUMIDITY_00),
-                     EXPECTED_DATA_V3_TEMPERATURE_HUMIDITY_00);
+  // Test the process function with V3 type 0x05 data (00)
+  it('should handle V3 type 0x05 (temperature & humidity) data', function() {
+    assert.deepEqual(manufacturer.process(INPUT_DATA_V3_TYPE_05_00),
+                     EXPECTED_DATA_V3_TYPE_05_00);
   });
 
-  // Test the process function with V3 temperature humidity data (01)
-  it('should handle V3 temperature humidity data', function() {
-    assert.deepEqual(manufacturer.process(
-                                         INPUT_DATA_V3_TEMPERATURE_HUMIDITY_01),
-                     EXPECTED_DATA_V3_TEMPERATURE_HUMIDITY_01);
+  // Test the process function with V3 type 0x05 data (00)
+  it('should handle V3 type 0x05 (temperature & humidity) data', function() {
+    assert.deepEqual(manufacturer.process(INPUT_DATA_V3_TYPE_05_01),
+                     EXPECTED_DATA_V3_TYPE_05_01);
   });
 
-  // Test the process function with V3 radar monitor data (00)
-  it('should handle V3 radar monitor data (pedestrian traffic)', function() {
-    assert.deepEqual(manufacturer.process(INPUT_DATA_V3_RADAR_MONITOR_00),
-                     EXPECTED_DATA_V3_RADAR_MONITOR_00);
+  // Test the process function with V3 type 0x18 data (00)
+  it('should handle V3 type 0x18 (radar) data (ped. traffic)', function() {
+    assert.deepEqual(manufacturer.process(INPUT_DATA_V3_TYPE_18_00),
+                     EXPECTED_DATA_V3_TYPE_18_00);
   });
 
-  // Test the process function with V3 radar monitor data (01)
-  it('should handle V3 radar monitor data (occupant info)', function() {
-    assert.deepEqual(manufacturer.process(INPUT_DATA_V3_RADAR_MONITOR_01),
-                     EXPECTED_DATA_V3_RADAR_MONITOR_01);
+  // Test the process function with V3 type 0x18 data (01)
+  it('should handle V3 type 0x18 (radar) data (occupant info)', function() {
+    assert.deepEqual(manufacturer.process(INPUT_DATA_V3_TYPE_18_01),
+                     EXPECTED_DATA_V3_TYPE_18_01);
   });
 
-  // Test the process function with V3 temperature data
-  it('should handle V3 temperature data', function() {
-    assert.deepEqual(manufacturer.process(INPUT_DATA_V3_TEMPERATURE),
-                     EXPECTED_DATA_V3_TEMPERATURE);
+  // Test the process function with V3 type 0x1b data
+  it('should handle V3 type 0x1b (temperature) data', function() {
+    assert.deepEqual(manufacturer.process(INPUT_DATA_V3_TYPE_1B),
+                     EXPECTED_DATA_V3_TYPE_1B);
   });
 
 });
