@@ -1,5 +1,5 @@
 /**
- * Copyright reelyActive 2021-2023
+ * Copyright reelyActive 2021-2024
  * We believe in an open Internet of Things
  */
 
@@ -22,6 +22,9 @@ const INPUT_DATA_V3_RADAR_MONITOR_00 =
                              'ca18007f230110320000000000000000000000001234abcd';
 const INPUT_DATA_V3_RADAR_MONITOR_01 =
                              'ca180106046e849b8c709a8c86987a7a8e0000001234abcd';
+const INPUT_DATA_V3_TEMPERATURE =
+                             'ca1b01000700669f240000c305ef197300c5000000000010';
+
 
 // Expected outputs for the scenario
 const EXPECTED_DATA_INVALID_INPUT = null;
@@ -74,6 +77,11 @@ const EXPECTED_DATA_V3_RADAR_MONITOR_00 = {
 const EXPECTED_DATA_V3_RADAR_MONITOR_01 = {
     numberOfOccupants: 4,
     numberOfOccupantsCycle: 6,
+    uri: "https://sniffypedia.org/Organization/Shenzhen_Minew_Technologies_Co_Ltd/"
+};
+const EXPECTED_DATA_V3_TEMPERATURE = {
+    temperature: 25.44921875,
+    batteryVoltage: 1.519,
     uri: "https://sniffypedia.org/Organization/Shenzhen_Minew_Technologies_Co_Ltd/"
 };
 
@@ -140,6 +148,12 @@ describe('minew', function() {
   it('should handle V3 radar monitor data (occupant info)', function() {
     assert.deepEqual(manufacturer.process(INPUT_DATA_V3_RADAR_MONITOR_01),
                      EXPECTED_DATA_V3_RADAR_MONITOR_01);
+  });
+
+  // Test the process function with V3 temperature data
+  it('should handle V3 temperature data', function() {
+    assert.deepEqual(manufacturer.process(INPUT_DATA_V3_TEMPERATURE),
+                     EXPECTED_DATA_V3_TEMPERATURE);
   });
 
 });

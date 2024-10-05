@@ -73,6 +73,7 @@ The following is a _non-exhaustive_ list of devices supported by __advlib-ble-ma
 | EnOcean      | EMDCB                    | enocean.js               |
 | Wiliot       | IoT Pixel                | wiliot.js                |
 | Minew        | MSR01                    | minew.js                 |
+| Minew        | MTB02                    | minew.js                 |
 | MOKOSmart    | P1                       | mokotechnology.js        |
 | MOKOSmart    | S03D (Door Sensor)       | mokotechnology.js        |
 
