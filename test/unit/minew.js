@@ -23,7 +23,7 @@ const INPUT_DATA_V3_RADAR_MONITOR_00 =
 const INPUT_DATA_V3_RADAR_MONITOR_01 =
                              'ca180106046e849b8c709a8c86987a7a8e0000001234abcd';
 const INPUT_DATA_V3_TEMPERATURE =
-                             'ca1b01000700669f240000c305ef197300c5000000000010';
+                             'ca1b010007000165332211ac05ef197300c5000000000010';
 
 
 // Expected outputs for the scenario
@@ -82,7 +82,9 @@ const EXPECTED_DATA_V3_RADAR_MONITOR_01 = {
 const EXPECTED_DATA_V3_TEMPERATURE = {
     temperature: 25.44921875,
     batteryVoltage: 1.519,
-    uri: "https://sniffypedia.org/Organization/Shenzhen_Minew_Technologies_Co_Ltd/"
+    txPower: -59,
+    deviceIds: [ 'ac1122336501/2' ],
+    uri: "https://sniffypedia.org/Product/Minew_MTB02/"
 };
 
 
