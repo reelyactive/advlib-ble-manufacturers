@@ -13,7 +13,9 @@ const INPUT_DATA_S3_STATIC = 'a301010017000b00010100006745233123ac23d3';
 const INPUT_DATA_S3_TEMPERATURE_HUMIDITY = 'a30364197348466745233123ac007ad3';
 const INPUT_DATA_S4_STATIC = 'a40000090600010100006745233123ac1234';
 const INPUT_DATA_S4_DOOR_ALARM = 'a40163010001ff6745233123ac1234';
-const INPUT_DATA_V3_TYPE_00 = 'ca006745233123ac6421870000000000000000001234abcd';
+const INPUT_DATA_V3_TYPE_00 = 
+                             'ca006745233123ac6421870000000000000000001234abcd';
+const INPUT_DATA_V3_TYPE_03 = 'ca030300050005ff0421643a7ac951';
 const INPUT_DATA_V3_TYPE_05_00 =
                              'ca05000000197348466d696e65770000000000001234abcd';
 const INPUT_DATA_V3_TYPE_05_01 =
@@ -56,6 +58,11 @@ const EXPECTED_DATA_V3_TYPE_00 = {
     deviceIds: [ 'ac2331234567/2' ],
     uri: "https://sniffypedia.org/Organization/Shenzhen_Minew_Technologies_Co_Ltd/",
     version: "1.3.7"
+};
+const EXPECTED_DATA_V3_TYPE_03 = {
+    acceleration: [ 0.01953125, 0.01953125, -0.984375 ],
+    batteryPercentage: 100,
+    uri: "https://sniffypedia.org/Organization/Shenzhen_Minew_Technologies_Co_Ltd/"
 };
 const EXPECTED_DATA_V3_TYPE_05_00 = {
     name: "minew",
@@ -124,6 +131,12 @@ describe('minew', function() {
   it('should handle V3 type 0x00 (device information) data', function() {
     assert.deepEqual(manufacturer.process(INPUT_DATA_V3_TYPE_00),
                      EXPECTED_DATA_V3_TYPE_00);
+  });
+
+  // Test the process function with V3 type 0x03 data
+  it('should handle V3 type 0x03 (combination) data', function() {
+    assert.deepEqual(manufacturer.process(INPUT_DATA_V3_TYPE_03),
+                     EXPECTED_DATA_V3_TYPE_03);
   });
 
   // Test the process function with V3 type 0x05 data (00)
