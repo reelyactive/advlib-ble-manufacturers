@@ -72,6 +72,8 @@ The following is a _non-exhaustive_ list of devices supported by __advlib-ble-ma
 | EnOcean      | EMSIB (STM 550B)         | enocean.js               |
 | EnOcean      | EMDCB                    | enocean.js               |
 | Wiliot       | IoT Pixel                | wiliot.js                |
+| Minew        | S3                       | minew.js                 |
+| Minew        | S4                       | minew.js                 |
 | Minew        | MBT02                    | minew.js                 |
 | Minew        | MSR01                    | minew.js                 |
 | Minew        | MTB02                    | minew.js                 |
