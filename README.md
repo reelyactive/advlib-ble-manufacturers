@@ -5,7 +5,7 @@ Wireless advertising packet decoding library for Bluetooth Low Energy manufactur
 
 ![Overview of advlib-ble-manufacturers](https://reelyactive.github.io/advlib-ble-manufacturers/images/overview.png)
 
-__advlib-ble-manufacturers__ is a lightweight [Node.js package](https://www.npmjs.com/package/advlib-ble-manufacturers) with no dependencies.  See also its sister library [advlib-ble-services](https://github.com/reelyactive/advlib-ble-services).
+__advlib-ble-manufacturers__ is a lightweight [Node.js package](https://www.npmjs.com/package/advlib-ble-manufacturers) with no dependencies.  It is included in reelyActive's [Pareto Anywhere](https://www.reelyactive.com/pareto/anywhere/) open source IoT middleware.  See also its sister library [advlib-ble-services](https://github.com/reelyactive/advlib-ble-services).
 
 
 Installation
