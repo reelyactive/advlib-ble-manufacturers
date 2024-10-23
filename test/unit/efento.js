@@ -1,5 +1,5 @@
 /**
- * Copyright reelyActive 2022
+ * Copyright reelyActive 2022-2024
  * We believe in an open Internet of Things
  */
 
@@ -17,6 +17,7 @@ const INPUT_DATA_DECODING_SCAN_RESPONSE_FRAME = '040145c102003d0327955d5d';
 // Expected outputs for the scenario
 const EXPECTED_DATA_INVALID_INPUT = null;
 const EXPECTED_DATA_EXAMPLE = {
+    batteryPercentage: 100,
     measurementPeriodSeconds: 60,
     relativeHumidity: 61,
     temperature: 28.569999999999993,
@@ -25,6 +26,7 @@ const EXPECTED_DATA_EXAMPLE = {
     version: "5.9"
 };
 const EXPECTED_DATA_DECODING_ADVERTISING_FRAME = {
+    batteryPercentage: 100,
     deviceIds: [ "112233445566/2" ],
     uri: "https://sniffypedia.org/Organization/Efento_Sp_zoo/"
 };
