@@ -54,6 +54,7 @@ The following manufacturers, in order of their assigned company codes, are suppo
 | 0x0583       | Code Blue Communications | codebluecommunications.js  |
 | 0x0590       | Pur3 Ltd (Espruino)      | pur3ltd.js                 |
 | 0x0639       | Minew                    | minew.js                   |
+| 0x075b       | Smart Sensor Devices     | smartsensordevices.js      |
 | 0x0a62       | MOKO Technology          | mokotechnology.js          |
 
 Consult the [Bluetooth Assigned Numbers for Company Identifiers](https://www.bluetooth.com/specifications/assigned-numbers/company-identifiers/) for the most recent listing of company code assignments.
@@ -64,21 +65,22 @@ Supported Devices
 
 The following is a _non-exhaustive_ list of devices supported by __advlib-ble-manufacturers__.
 
-| Manufacturer | Model/Device             | /lib file                |
-|:-------------|:-------------------------|:-------------------------|
-| Apple        | iBeacon                  | apple.js                 |
-| MOKOSmart    | S02R (ToF Sensor)        | nordicsemiconductor.js   |
-| Laird        | BT610                    | lairdconnectivity.js     |
-| EnOcean      | EMSIB (STM 550B)         | enocean.js               |
-| EnOcean      | EMDCB                    | enocean.js               |
-| Wiliot       | IoT Pixel                | wiliot.js                |
-| Minew        | S3                       | minew.js                 |
-| Minew        | S4                       | minew.js                 |
-| Minew        | MBT02                    | minew.js                 |
-| Minew        | MSR01                    | minew.js                 |
-| Minew        | MTB02                    | minew.js                 |
-| MOKOSmart    | P1                       | mokotechnology.js        |
-| MOKOSmart    | S03D (Door Sensor)       | mokotechnology.js        |
+| Manufacturer         | Model/Device             | /lib file                |
+|:---------------------|:-------------------------|:-------------------------|
+| Apple                | iBeacon                  | apple.js                 |
+| MOKOSmart            | S02R (ToF Sensor)        | nordicsemiconductor.js   |
+| Laird                | BT610                    | lairdconnectivity.js     |
+| EnOcean              | EMSIB (STM 550B)         | enocean.js               |
+| EnOcean              | EMDCB                    | enocean.js               |
+| Wiliot               | IoT Pixel                | wiliot.js                |
+| Minew                | S3                       | minew.js                 |
+| Minew                | S4                       | minew.js                 |
+| Minew                | MBT02                    | minew.js                 |
+| Minew                | MSR01                    | minew.js                 |
+| Minew                | MTB02                    | minew.js                 |
+| Smart Sensor Devices | HibouAir                 | smartsensordevices.js    |
+| MOKOSmart            | P1                       | mokotechnology.js        |
+| MOKOSmart            | S03D (Door Sensor)       | mokotechnology.js        |
 
 
 Contributing
