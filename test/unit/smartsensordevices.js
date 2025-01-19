@@ -19,7 +19,7 @@ const EXPECTED_DATA_INVALID_INPUT = null;
 const EXPECTED_DATA_HIBOUAIR_PM = {
     boardId: 4659724,
     illuminance: 639,
-    pressure: 100220000,
+    pressure: 100220,
     temperature: 21.1,
     relativeHumidity: 43.9,
     uri: "https://sniffypedia.org/Organization/Smart_Sensor_Devices_AB/"
@@ -27,7 +27,7 @@ const EXPECTED_DATA_HIBOUAIR_PM = {
 const EXPECTED_DATA_HIBOUAIR_CO2 = {
     boardId: 4659724,
     illuminance: 639,
-    pressure: 100220000,
+    pressure: 100220,
     temperature: 21.1,
     relativeHumidity: 43.9,
     carbonDioxideConcentration: 570,
