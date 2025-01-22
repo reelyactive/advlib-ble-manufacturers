@@ -22,6 +22,7 @@ const EXPECTED_DATA_HIBOUAIR_PM = {
     pressure: 100220,
     temperature: 21.1,
     relativeHumidity: 43.9,
+    volatileOrganicCompoundsConcentration: 497,
     uri: "https://sniffypedia.org/Organization/Smart_Sensor_Devices_AB/"
 };
 const EXPECTED_DATA_HIBOUAIR_CO2 = {
@@ -30,6 +31,7 @@ const EXPECTED_DATA_HIBOUAIR_CO2 = {
     pressure: 100220,
     temperature: 21.1,
     relativeHumidity: 43.9,
+    volatileOrganicCompoundsConcentration: 497,
     carbonDioxideConcentration: 570,
     uri: "https://sniffypedia.org/Organization/Smart_Sensor_Devices_AB/"
 };
