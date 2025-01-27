@@ -10,15 +10,15 @@ const assert = require ('assert');
 
 // Input data for the scenario
 const INPUT_DATA_HIBOUAIR_PM =
-                             '0503471a0c7f022627d300b701f1011c001f003300023a02';
+                             '0503471a0c00002627d300b701f1011c001f003300000002';
 const INPUT_DATA_HIBOUAIR_CO2 =
-                             '0504471a0c7f022627d300b701f101000000000000023a02';
+                             '05042202f77f022627d300b701f101000000000000023a02';
 
 // Expected outputs for the scenario
 const EXPECTED_DATA_INVALID_INPUT = null;
 const EXPECTED_DATA_HIBOUAIR_PM = {
     boardId: 4659724,
-    illuminance: 639,
+    illuminance: 0,
     pressure: 100220,
     temperature: 21.1,
     relativeHumidity: 43.9,
@@ -26,7 +26,7 @@ const EXPECTED_DATA_HIBOUAIR_PM = {
     uri: "https://sniffypedia.org/Organization/Smart_Sensor_Devices_AB/"
 };
 const EXPECTED_DATA_HIBOUAIR_CO2 = {
-    boardId: 4659724,
+    boardId: 2228983,
     illuminance: 639,
     pressure: 100220,
     temperature: 21.1,
