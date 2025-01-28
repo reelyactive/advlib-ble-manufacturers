@@ -17,7 +17,7 @@ const INPUT_DATA_HIBOUAIR_CO2 =
 // Expected outputs for the scenario
 const EXPECTED_DATA_INVALID_INPUT = null;
 const EXPECTED_DATA_HIBOUAIR_PM = {
-    boardId: 4659724,
+    boardId: "471a0c",
     illuminance: 0,
     pressure: 100220,
     temperature: 21.1,
@@ -26,7 +26,7 @@ const EXPECTED_DATA_HIBOUAIR_PM = {
     uri: "https://sniffypedia.org/Organization/Smart_Sensor_Devices_AB/"
 };
 const EXPECTED_DATA_HIBOUAIR_CO2 = {
-    boardId: 2228983,
+    boardId: "2202f7",
     illuminance: 639,
     pressure: 100220,
     temperature: 21.1,
