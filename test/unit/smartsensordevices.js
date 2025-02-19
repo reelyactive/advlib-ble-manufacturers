@@ -25,6 +25,9 @@ const EXPECTED_DATA_HIBOUAIR_PM = {
     temperature: 21.1,
     relativeHumidity: 43.9,
     volatileOrganicCompoundsConcentration: 4.97,
+    "pm1.0": 2.8,
+    "pm2.5": 3.1,
+    "pm10": 5.1,
     uri: "https://sniffypedia.org/Organization/Smart_Sensor_Devices_AB/"
 };
 const EXPECTED_DATA_HIBOUAIR_CO2 = {
