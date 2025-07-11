@@ -9,8 +9,8 @@ const assert = require ('assert');
 
 
 // Input data for the scenario
-const INPUT_DATA_MSE01 = '01234522';
-const INPUT_DATA_MSE02 = '02466441';
+const INPUT_DATA_MSE01 = '51012345220100efb598c3b498c0b63cbed37ebd0398bd';
+const INPUT_DATA_MSE02 = '5102466441ff0fef0398c6b63cc2b498c177bec0cb98bd';
 const INPUT_DATA_S3_STATIC = 'a301010017000b00010100006745233123ac23d3';
 const INPUT_DATA_S3_TEMPERATURE_HUMIDITY = 'a30364197348466745233123ac007ad3';
 const INPUT_DATA_S4_STATIC = 'a40000090600010100006745233123ac1234';
@@ -37,6 +37,7 @@ const EXPECTED_DATA_MSE01 = {
     isButtonPressed: [ true, false ],
     isContactDetected: [ true ],
     isMotionDetected: [ true ],
+    levelPercentage: 0.02442002442002442,
     txCount: 35,
     uri: "https://sniffypedia.org/Organization/Shenzhen_Minew_Technologies_Co_Ltd/"
 };
@@ -45,6 +46,7 @@ const EXPECTED_DATA_MSE02 = {
     isButtonPressed: [ false, true ],
     isContactDetected: [ false ],
     isMotionDetected: [ false ],
+    levelPercentage: 100,
     txCount: 70,
     uri: "https://sniffypedia.org/Organization/Shenzhen_Minew_Technologies_Co_Ltd/"
 };
