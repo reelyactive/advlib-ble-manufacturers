@@ -76,9 +76,10 @@ The following is a _non-exhaustive_ list of devices supported by __advlib-ble-ma
 | Minew                | S3                       | minew.js                 |
 | Minew                | S4                       | minew.js                 |
 | Minew                | MBT02                    | minew.js                 |
-| Minew                | MSR01                    | minew.js                 |
+| Minew                | MSD01                    | minew.js                 |
 | Minew                | MSE01                    | minew.js                 |
 | Minew                | MSE02                    | minew.js                 |
+| Minew                | MSR01                    | minew.js                 |
 | Minew                | MTB02                    | minew.js                 |
 | Smart Sensor Devices | HibouAir                 | smartsensordevices.js    |
 | MOKOSmart            | P1                       | mokotechnology.js        |

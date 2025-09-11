@@ -28,6 +28,8 @@ const INPUT_DATA_V3_TYPE_18_01 =
                              'ca180106046e849b8c709a8c86987a7a8e0000001234abcd';
 const INPUT_DATA_V3_TYPE_1B =
                              'ca1b010007000165332211ac05ef197300c5000000000010';
+const INPUT_DATA_V3_TYPE_1E =
+                             'ca1e0064f4010f450700000000000000000000001234abcd';
 
 
 // Expected outputs for the scenario
@@ -112,6 +114,17 @@ const EXPECTED_DATA_V3_TYPE_1B = {
     txPower: -59,
     deviceIds: [ 'ac1122336501/2' ],
     uri: "https://sniffypedia.org/Product/Minew_MTB02/"
+};
+const EXPECTED_DATA_V3_TYPE_1E = {
+    distance: 0.5,
+    distanceCycle: 100,
+    isBatteryLow: true,
+    isContactDetected: [ false ],
+    isMotionDetected: [ true ],
+    isOccupancyDetected: [ true ],
+    occupancyDetectionCycle: 69,
+    tamperCycle: 7,
+    uri: "https://sniffypedia.org/Organization/Shenzhen_Minew_Technologies_Co_Ltd/"
 };
 
 
@@ -199,6 +212,12 @@ describe('minew', function() {
   it('should handle V3 type 0x1b (temperature) data', function() {
     assert.deepEqual(manufacturer.process(INPUT_DATA_V3_TYPE_1B),
                      EXPECTED_DATA_V3_TYPE_1B);
+  });
+
+  // Test the process function with V3 type 0x1e data
+  it('should handle V3 type 0x1e (time-of-flight) data', function() {
+    assert.deepEqual(manufacturer.process(INPUT_DATA_V3_TYPE_1E),
+                     EXPECTED_DATA_V3_TYPE_1E);
   });
 
 });
