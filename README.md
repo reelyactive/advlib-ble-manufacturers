@@ -54,6 +54,7 @@ The following manufacturers, in order of their assigned company codes, are suppo
 | 0x0583       | Code Blue Communications | codebluecommunications.js  |
 | 0x0590       | Pur3 Ltd (Espruino)      | pur3ltd.js                 |
 | 0x0639       | Minew                    | minew.js                   |
+| 0x0757       | ELA Innovation           | elainnovation.js           |
 | 0x075b       | Smart Sensor Devices     | smartsensordevices.js      |
 | 0x0a62       | MOKO Technology          | mokotechnology.js          |
 
@@ -84,6 +85,13 @@ The following is a _non-exhaustive_ list of devices supported by __advlib-ble-ma
 | Smart Sensor Devices | HibouAir                 | smartsensordevices.js    |
 | MOKOSmart            | P1                       | mokotechnology.js        |
 | MOKOSmart            | S03D (Door Sensor)       | mokotechnology.js        |
+| ELA Innovation       | Blue PUCK T EN12830      | elainnovation.js         |
+| ELA Innovation       | Blue PUCK RHT            | elainnovation.js         |
+| ELA Innovation       | Blue PUCK MAG            | elainnovation.js         |
+| ELA Innovation       | Blue PUCK MOV            | elainnovation.js         |
+| ELA Innovation       | Blue PUCK DI             | elainnovation.js         |
+| ELA Innovation       | Blue PUCK PIR            | elainnovation.js         |
+| ELA Innovation       | Blue LITE TOUCH          | elainnovation.js         |
 
 
 Contributing
