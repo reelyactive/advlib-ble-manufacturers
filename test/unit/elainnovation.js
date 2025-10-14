@@ -18,6 +18,8 @@ const INPUT_DATA_ANG = '56b8ffecffacfc0d0950204d4f5620423030353537';
 const INPUT_DATA_DI = '620a000e0942455f544553545f544f52494e';
 const INPUT_DATA_PIR = '929c001009454c415f5055434b5f5049525f3031';
 const INPUT_DATA_TOUCH = 'b29c001009454c415f5055434b5f5049525f3031';
+const INPUT_DATA_BATT_PERCENT = 'f145';
+const INPUT_DATA_BATT_VOLTAGE = 'f2ac0b';
 
 
 // Expected outputs for the scenario
@@ -66,6 +68,14 @@ const EXPECTED_DATA_PIR = {
 const EXPECTED_DATA_TOUCH = {
     isButtonPressed: [ false ],
     name: "ELA_PUCK_PIR_01",
+    uri: "https://sniffypedia.org/Organization/ELA_Innovation_SA/"
+};
+const EXPECTED_DATA_BATT_PERCENT = {
+    batteryPercentage: 69,
+    uri: "https://sniffypedia.org/Organization/ELA_Innovation_SA/"
+};
+const EXPECTED_DATA_BATT_VOLTAGE = {
+    batteryVoltage: 2.988,
     uri: "https://sniffypedia.org/Organization/ELA_Innovation_SA/"
 };
 
@@ -122,6 +132,18 @@ describe('elainnovation', function() {
   it('should handle decoding TOUCH data', function() {
     assert.deepEqual(manufacturer.process(INPUT_DATA_TOUCH),
                      EXPECTED_DATA_TOUCH);
+  });
+
+  // Test the process function with the BATT example data
+  it('should handle decoding BATT (%) data', function() {
+    assert.deepEqual(manufacturer.process(INPUT_DATA_BATT_PERCENT),
+                     EXPECTED_DATA_BATT_PERCENT);
+  });
+
+  // Test the process function with the BATT example data
+  it('should handle decoding BATT (V) data', function() {
+    assert.deepEqual(manufacturer.process(INPUT_DATA_BATT_VOLTAGE),
+                     EXPECTED_DATA_BATT_VOLTAGE);
   });
 
 });
