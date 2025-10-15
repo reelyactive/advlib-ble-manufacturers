@@ -41,7 +41,7 @@ const EXPECTED_DATA_MSE01 = {
     isMotionDetected: [ true ],
     levelPercentage: 0.02442002442002442,
     txCount: 35,
-    uri: "https://sniffypedia.org/Organization/Shenzhen_Minew_Technologies_Co_Ltd/"
+    uri: "https://sniffypedia.org/Product/Minew_MSE01/"
 };
 const EXPECTED_DATA_MSE02 = {
     batteryPercentage: 100,
@@ -50,7 +50,7 @@ const EXPECTED_DATA_MSE02 = {
     isMotionDetected: [ false ],
     levelPercentage: 100,
     txCount: 70,
-    uri: "https://sniffypedia.org/Organization/Shenzhen_Minew_Technologies_Co_Ltd/"
+    uri: "https://sniffypedia.org/Product/Minew_MSE02/"
 };
 const EXPECTED_DATA_S3_STATIC = {
     deviceIds: [ 'ac2331234567/2' ],

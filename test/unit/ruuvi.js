@@ -23,7 +23,7 @@ const EXPECTED_DATA_RAW_V2 = {
     txPower: 4,
     txCount: 205,
     deviceIds: [ "cbb8334c884f" ],
-    uri: "https://sniffypedia.org/Product/Ruuvi_Tag/"
+    uri: "https://sniffypedia.org/Product/Ruuvi_RuuviTag/"
 };
 const EXPECTED_DATA_AIR = {
     temperature: 29.5,
