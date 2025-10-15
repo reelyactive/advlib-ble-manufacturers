@@ -50,6 +50,7 @@ The following manufacturers, in order of their assigned company codes, are suppo
 | 0x0077       | Laird Connectivity       | lairdconnectivity.js       |
 | 0x026c       | Efento                   | efento.js                  |
 | 0x03da       | EnOcean                  | enocean.js                 |
+| 0x0499       | Ruuvi                    | ruuvi.js                   |
 | 0x0500       | Wiliot                   | wiliot.js                  |
 | 0x0583       | Code Blue Communications | codebluecommunications.js  |
 | 0x0590       | Pur3 Ltd (Espruino)      | pur3ltd.js                 |
@@ -92,6 +93,8 @@ The following is a _non-exhaustive_ list of devices supported by __advlib-ble-ma
 | ELA Innovation       | Blue PUCK DI             | elainnovation.js         |
 | ELA Innovation       | Blue PUCK PIR            | elainnovation.js         |
 | ELA Innovation       | Blue LITE TOUCH          | elainnovation.js         |
+| Ruuvi                | RuuviTag                 | ruuvi.js                 |
+| Ruuvi                | Air                      | ruuvi.js                 |
 
 
 Contributing
