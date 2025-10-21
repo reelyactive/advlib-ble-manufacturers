@@ -31,8 +31,8 @@ const EXPECTED_DATA_AIR = {
     pressure: 101102,
     "pm2.5": 11.2,
     carbonDioxideConcentration: 201,
-    volatileOrganicCompoundsConcentration: 10,
-    nitrogenOxideConcentration: 2,
+    volatileOrganicCompoundsConcentration: 0.00964948117366974,
+    nitrogenOxideIndex: 2,
     illuminance: 13026.67,
     txCount: 205,
     uri: "https://sniffypedia.org/Product/Ruuvi_Air/"
