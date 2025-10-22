@@ -15,7 +15,7 @@
     "manufacturer-specific data",
     "library"
   ],
-  "version": "1.13.2",
+  "version": "1.13.3",
   "engines": {
     "node": ">=6.0.0"
   },
