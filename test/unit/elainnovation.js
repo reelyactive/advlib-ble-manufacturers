@@ -9,15 +9,15 @@ const assert = require ('assert');
 
 
 // Input data for the scenario
-const INPUT_DATA_MFR = '06aabbccddeeff0b0942455f544553545f4944';
-const INPUT_DATA_TEMP = '12850a0b0950205420383031383033';
-const INPUT_DATA_RHT = '213012b80a0d09502052485420393030343539';
-const INPUT_DATA_MAG = '320a000d0950204d414720433030363245';
-const INPUT_DATA_MOV = '420c000d0950204d4f5620423030353537';
-const INPUT_DATA_ANG = '56b8ffecffacfc0d0950204d4f5620423030353537';
-const INPUT_DATA_DI = '620a000e0942455f544553545f544f52494e';
-const INPUT_DATA_PIR = '929c001009454c415f5055434b5f5049525f3031';
-const INPUT_DATA_TOUCH = 'b29c001009454c415f5055434b5f5049525f3031';
+const INPUT_DATA_MFR = '06aabbccddeeff'; //0b0942455f544553545f4944';
+const INPUT_DATA_TEMP = '12850a'; //0b0950205420383031383033';
+const INPUT_DATA_RHT = '213012b80a'; //0d09502052485420393030343539';
+const INPUT_DATA_MAG = '320a00'; //0d0950204d414720433030363245';
+const INPUT_DATA_MOV = '420c00'; //0d0950204d4f5620423030353537';
+const INPUT_DATA_ANG = '56b8ffecffacfc'; //0d0950204d4f5620423030353537';
+const INPUT_DATA_DI = '620a00'; //0e0942455f544553545f544f52494e';
+const INPUT_DATA_PIR = '929c00'; //1009454c415f5055434b5f5049525f3031';
+const INPUT_DATA_TOUCH = 'b29c00'; //1009454c415f5055434b5f5049525f3031';
 const INPUT_DATA_BATT_PERCENT = 'f145';
 const INPUT_DATA_BATT_VOLTAGE = 'f2ac0b';
 
@@ -26,48 +26,39 @@ const INPUT_DATA_BATT_VOLTAGE = 'f2ac0b';
 const EXPECTED_DATA_INVALID_INPUT = null;
 const EXPECTED_DATA_MFR = {
     deviceIds: [ 'aabbccddeeff' ],
-    name: "BE_TEST_ID",
     uri: "https://sniffypedia.org/Organization/ELA_Innovation_SA/"
 };
 const EXPECTED_DATA_TEMP = {
     temperature: 26.93,
-    name: "P T 801803",
     uri: "https://sniffypedia.org/Organization/ELA_Innovation_SA/"
 };
 const EXPECTED_DATA_RHT = {
     relativeHumidity: 48,
     temperature: 27.44,
-    name: "P RHT 900459",
     uri: "https://sniffypedia.org/Organization/ELA_Innovation_SA/"
 };
 const EXPECTED_DATA_MAG = {
     isContactDetected: [ false ],
-    name: "P MAG C0062E",
     uri: "https://sniffypedia.org/Organization/ELA_Innovation_SA/"
 };
 const EXPECTED_DATA_MOV = {
     isMotionDetected: [ false ],
-    name: "P MOV B00557",
     uri: "https://sniffypedia.org/Organization/ELA_Innovation_SA/"
 };
 const EXPECTED_DATA_ANG = {
     acceleration: [ -0.072, -0.02, -0.852 ],
-    name: "P MOV B00557",
     uri: "https://sniffypedia.org/Organization/ELA_Innovation_SA/"
 };
 const EXPECTED_DATA_DI = {
     isContactDetected: [ false ],
-    name: "BE_TEST_TORIN",
     uri: "https://sniffypedia.org/Organization/ELA_Innovation_SA/"
 };
 const EXPECTED_DATA_PIR = {
     isMotionDetected: [ false ],
-    name: "ELA_PUCK_PIR_01",
     uri: "https://sniffypedia.org/Organization/ELA_Innovation_SA/"
 };
 const EXPECTED_DATA_TOUCH = {
     isButtonPressed: [ false ],
-    name: "ELA_PUCK_PIR_01",
     uri: "https://sniffypedia.org/Organization/ELA_Innovation_SA/"
 };
 const EXPECTED_DATA_BATT_PERCENT = {
