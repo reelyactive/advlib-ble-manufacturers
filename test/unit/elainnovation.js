@@ -9,15 +9,15 @@ const assert = require ('assert');
 
 
 // Input data for the scenario
-const INPUT_DATA_MFR = '06aabbccddeeff'; //0b0942455f544553545f4944';
-const INPUT_DATA_TEMP = '12850a'; //0b0950205420383031383033';
-const INPUT_DATA_RHT = '213012b80a'; //0d09502052485420393030343539';
-const INPUT_DATA_MAG = '320a00'; //0d0950204d414720433030363245';
-const INPUT_DATA_MOV = '420c00'; //0d0950204d4f5620423030353537';
-const INPUT_DATA_ANG = '56b8ffecffacfc'; //0d0950204d4f5620423030353537';
-const INPUT_DATA_DI = '620a00'; //0e0942455f544553545f544f52494e';
-const INPUT_DATA_PIR = '929c00'; //1009454c415f5055434b5f5049525f3031';
-const INPUT_DATA_TOUCH = 'b29c00'; //1009454c415f5055434b5f5049525f3031';
+const INPUT_DATA_MFR = '06aabbccddeeff';
+const INPUT_DATA_TEMP = '12850a';
+const INPUT_DATA_RHT = '213012b80a';
+const INPUT_DATA_MAG = '320a00';
+const INPUT_DATA_MOV = '420c00';
+const INPUT_DATA_ANG = '56b8ffecffacfc';
+const INPUT_DATA_DI = '620a00';
+const INPUT_DATA_PIR = '929c00';
+const INPUT_DATA_TOUCH = 'b29c00';
 const INPUT_DATA_BATT_PERCENT = 'f145';
 const INPUT_DATA_BATT_VOLTAGE = 'f2ac0b';
 
@@ -39,10 +39,12 @@ const EXPECTED_DATA_RHT = {
 };
 const EXPECTED_DATA_MAG = {
     isContactDetected: [ false ],
+    isContactDetectedCycle: 5,
     uri: "https://sniffypedia.org/Organization/ELA_Innovation_SA/"
 };
 const EXPECTED_DATA_MOV = {
     isMotionDetected: [ false ],
+    isMotionDetectedCycle: 6,
     uri: "https://sniffypedia.org/Organization/ELA_Innovation_SA/"
 };
 const EXPECTED_DATA_ANG = {
@@ -50,15 +52,18 @@ const EXPECTED_DATA_ANG = {
     uri: "https://sniffypedia.org/Organization/ELA_Innovation_SA/"
 };
 const EXPECTED_DATA_DI = {
-    isContactDetected: [ false ],
+    isInputDetected: [ false ],
+    isInputDetectedCycle: 5,
     uri: "https://sniffypedia.org/Organization/ELA_Innovation_SA/"
 };
 const EXPECTED_DATA_PIR = {
     isMotionDetected: [ false ],
+    isMotionDetectedCycle: 78,
     uri: "https://sniffypedia.org/Organization/ELA_Innovation_SA/"
 };
 const EXPECTED_DATA_TOUCH = {
     isButtonPressed: [ false ],
+    isButtonPressedCycle: 78,
     uri: "https://sniffypedia.org/Organization/ELA_Innovation_SA/"
 };
 const EXPECTED_DATA_BATT_PERCENT = {

@@ -40,7 +40,7 @@ const EXPECTED_DATA_MSE01 = {
     isContactDetected: [ true ],
     isMotionDetected: [ true ],
     levelPercentage: 0.02442002442002442,
-    txCount: 35,
+    txCycle: 35,
     uri: "https://sniffypedia.org/Product/Minew_MSE01/"
 };
 const EXPECTED_DATA_MSE02 = {
@@ -49,7 +49,7 @@ const EXPECTED_DATA_MSE02 = {
     isContactDetected: [ false ],
     isMotionDetected: [ false ],
     levelPercentage: 100,
-    txCount: 70,
+    txCycle: 70,
     uri: "https://sniffypedia.org/Product/Minew_MSE02/"
 };
 const EXPECTED_DATA_S3_STATIC = {

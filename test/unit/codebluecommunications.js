@@ -1,5 +1,5 @@
 /**
- * Copyright reelyActive 2015-2021
+ * Copyright reelyActive 2015-2025
  * We believe in an open Internet of Things
  */
 
@@ -21,6 +21,7 @@ const EXPECTED_DATA_DIRACT_PROXIMITY = {
     batteryPercentage: 100,
     deviceIds: [ '12345678' ],
     nearest: [ { deviceId: "aabbccdd", rssi: -69 } ],
+    txCycle: 7,
     uri: "https://sniffypedia.org/Organization/Code_Blue_Communications_Inc/DirAct/"
 }
 const EXPECTED_DATA_DIRACT_DIGEST = {
