@@ -1,5 +1,5 @@
 /**
- * Copyright reelyActive 2021-2025
+ * Copyright reelyActive 2021-2026
  * We believe in an open Internet of Things
  */
 
@@ -26,8 +26,9 @@ const INPUT_DATA_V3_TYPE_18_00 =
                              'ca18007f230110320000000000000000000000001234abcd';
 const INPUT_DATA_V3_TYPE_18_01 =
                              'ca180106046e849b8c709a8c86987a7a8e0000001234abcd';
-const INPUT_DATA_V3_TYPE_1B =
+const INPUT_DATA_V3_TYPE_1B_01 =
                              'ca1b010007000165332211ac05ef197300c5000000000010';
+const INPUT_DATA_V3_TYPE_1B_02 = 'ca1b0201016bd90e72020165332211ac030bb8';
 const INPUT_DATA_V3_TYPE_1E =
                              'ca1e0064f4010f450700000000000000000000001234abcd';
 
@@ -108,12 +109,19 @@ const EXPECTED_DATA_V3_TYPE_18_01 = {
     numberOfOccupantsCycle: 6,
     uri: "https://sniffypedia.org/Organization/Shenzhen_Minew_Technologies_Co_Ltd/"
 };
-const EXPECTED_DATA_V3_TYPE_1B = {
+const EXPECTED_DATA_V3_TYPE_1B_01 = {
     temperature: 25.44921875,
     batteryVoltage: 1.519,
     txPower: -59,
     deviceIds: [ 'ac1122336501/2' ],
     uri: "https://sniffypedia.org/Product/Minew_MTB02/"
+};
+const EXPECTED_DATA_V3_TYPE_1B_02 = {
+    temperature: 28.72510872053101,
+    relativeHumidity: 1.0534828717479208,
+    batteryVoltage: 3,
+    deviceIds: [ 'ac1122336501/2' ],
+    uri: "https://sniffypedia.org/Organization/Shenzhen_Minew_Technologies_Co_Ltd/"
 };
 const EXPECTED_DATA_V3_TYPE_1E = {
     distance: 0.5,
@@ -208,10 +216,16 @@ describe('minew', function() {
                      EXPECTED_DATA_V3_TYPE_18_01);
   });
 
-  // Test the process function with V3 type 0x1b data
+  // Test the process function with V3 type 0x1b data (01)
   it('should handle V3 type 0x1b (temperature) data', function() {
-    assert.deepEqual(manufacturer.process(INPUT_DATA_V3_TYPE_1B),
-                     EXPECTED_DATA_V3_TYPE_1B);
+    assert.deepEqual(manufacturer.process(INPUT_DATA_V3_TYPE_1B_01),
+                     EXPECTED_DATA_V3_TYPE_1B_01);
+  });
+
+  // Test the process function with V3 type 0x1b data (02)
+  it('should handle V3 type 0x1b (temperature/humidity) data', function() {
+    assert.deepEqual(manufacturer.process(INPUT_DATA_V3_TYPE_1B_02),
+                     EXPECTED_DATA_V3_TYPE_1B_02);
   });
 
   // Test the process function with V3 type 0x1e data
