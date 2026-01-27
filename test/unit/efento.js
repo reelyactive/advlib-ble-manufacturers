@@ -1,5 +1,5 @@
 /**
- * Copyright reelyActive 2022-2024
+ * Copyright reelyActive 2022-2026
  * We believe in an open Internet of Things
  */
 
@@ -11,7 +11,7 @@ const assert = require ('assert');
 // Input data for the scenario
 const INPUT_DATA_EXAMPLE = '0205090100002c07803c0001020645c1003d0e8000005d5d';
 const INPUT_DATA_DECODING_ADVERTISING_FRAME =
-                             '031122334455660000010000000000000000000000005d5d';
+                                '03282c024f00123144116421562400b4000100009e04';
 const INPUT_DATA_DECODING_SCAN_RESPONSE_FRAME = '040145c102003d0327955d5d';
 
 // Expected outputs for the scenario
@@ -27,7 +27,9 @@ const EXPECTED_DATA_EXAMPLE = {
 };
 const EXPECTED_DATA_DECODING_ADVERTISING_FRAME = {
     batteryPercentage: 100,
-    deviceIds: [ "112233445566/2" ],
+    deviceIds: [ "282c024f0012/2" ],
+    firmwareVersion: "6.10.4",
+    encrypted: { checksum: "9e04", method: "efento-v6" },
     uri: "https://sniffypedia.org/Organization/Efento_Sp_zoo/"
 };
 const EXPECTED_DATA_DECODING_SCAN_RESPONSE_FRAME = {
