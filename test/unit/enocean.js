@@ -1,5 +1,5 @@
 /**
- * Copyright reelyActive 2015-2022
+ * Copyright reelyActive 2015-2026
  * We believe in an open Internet of Things
  */
 
@@ -27,7 +27,7 @@ const EXPECTED_DATA_OCCUPANCY_MULTI_SENSOR = {
     relativeHumidity: 21.5,
     illuminance: 1218,
     isMotionDetected: [ false ],
-    securitySignature: "c724eaf0",
+    encrypted: { checksum: "c724eaf0", method: "rfc3610" },
     uri: "https://sniffypedia.org/Organization/EnOcean_GmbH/"
 };
 const EXPECTED_DATA_IOT_MULTI_SENSOR = {
@@ -39,7 +39,7 @@ const EXPECTED_DATA_IOT_MULTI_SENSOR = {
     illuminance: 11,
     isMotionDetected: [ true ],
     isContactDetected: [ false ],
-    securitySignature: "0bfd5f17",
+    encrypted: { checksum: "0bfd5f17", method: "rfc3610" },
     uri: "https://sniffypedia.org/Organization/EnOcean_GmbH/"
 };
 const EXPECTED_DATA_MOTION_DETECTOR = {
@@ -47,19 +47,19 @@ const EXPECTED_DATA_MOTION_DETECTOR = {
     batteryPercentage: 96,
     illuminance: 1,
     isMotionDetected: [ true ],
-    securitySignature: "1012b343",
+    encrypted: { checksum: "1012b343", method: "rfc3610" },
     uri: "https://sniffypedia.org/Organization/EnOcean_GmbH/"
 };
 const EXPECTED_DATA_PTM_215B_PRESS = {
     txCount: 95,
     isButtonPressed: [ false, false, true, false ],
-    securitySignature: "09df40a3",
+    encrypted: { checksum: "09df40a3", method: "rfc3610" },
     uri: "https://sniffypedia.org/Organization/EnOcean_GmbH/"
 }
 const EXPECTED_DATA_PTM_215B_RELEASE = {
     txCount: 96,
     isButtonPressed: [ false, false, false, false ],
-    securitySignature: "4cc8f7a5",
+    encrypted: { checksum: "4cc8f7a5", method: "rfc3610" },
     uri: "https://sniffypedia.org/Organization/EnOcean_GmbH/"
 }
 
