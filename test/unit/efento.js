@@ -12,7 +12,7 @@ const assert = require ('assert');
 const INPUT_DATA_EXAMPLE = '0205090100002c07803c0001020645c1003d0e8000005d5d';
 const INPUT_DATA_DECODING_ADVERTISING_FRAME =
                                 '03282c024f00123144116421562400b4000100009e04';
-const INPUT_DATA_DECODING_SCAN_RESPONSE_FRAME = '040145c102003d0327955d5d';
+const INPUT_DATA_DECODING_SCAN_RESPONSE_FRAME = '04010001c00200004c2830';
 
 // Expected outputs for the scenario
 const EXPECTED_DATA_INVALID_INPUT = null;
@@ -33,9 +33,9 @@ const EXPECTED_DATA_DECODING_ADVERTISING_FRAME = {
     uri: "https://sniffypedia.org/Organization/Efento_Sp_zoo/"
 };
 const EXPECTED_DATA_DECODING_SCAN_RESPONSE_FRAME = {
-    pressure: 101330,
-    relativeHumidity: 61,
-    temperature: 28.569999999999993,
+    encrypted: { checksum: "2830", method: "efento-v6" },
+    relativeHumidity: 38,
+    temperature: 22.4,
     uri: "https://sniffypedia.org/Organization/Efento_Sp_zoo/"
 };
 
